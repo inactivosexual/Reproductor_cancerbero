@@ -1,0 +1,113 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
+:root{
+    --blanco:rgba(228,228,228,1)
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Limelight", sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    width: 100%;
+
+
+
+    background: url(img/Front_Cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter:blur(2px);
+}
+body::before{
+    content:'' ;
+    position: absolute;
+    background-color: rgba(0,0,0,0.2);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+body > *{
+    position: relative;
+    z-index: 2;
+}
+.reproductor-musica{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: var(--blanco);
+width: 400px;
+padding: 10px 30px;
+border-radius: 30px;
+background-color:rgba(228,228,228,0.1) ;
+}
+.reproductor-musica h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+.reproductor-musica p{
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
+}
+#progreso {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 7px;
+    background: rgba(165,165,165,0.4);
+    border-radius: 4px;
+    margin: 32px 0 24px;
+    cursor: pointer;
+}
+
+#progreso::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    background: rgba(165,165,165,0.4);
+    width: 16px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    outline: 4px solid var(--blanco);
+    box-shadow: 0 6px 10px rgba(165,165,165,0.4);
+}
+.controles {
+    display: flex;
+    justify-content: center;
+}
+
+.controles button {
+    width: 50px;
+    aspect-ratio: 1/1;
+    margin: 20px;
+    background: rgba(165,165,165,0.2);
+    border-radius: 50%;
+    border:  1px solid var(--blanco);
+    outline: 0;
+    font-size: 1.5rem;
+    box-shadow: 0 6px 10px rgba(165,165,165,0.4);
+    cursor: pointer;
+    transition:  all 0.1s linear;
+}
+.controles .control{
+    transform: scale(1.2);
+}
+.controles .control:hover {
+    transform: scale(1.1);
+}
+.controles .iconoControl{
+    transform: scale(1.3);
+}
+.controles .iconoControl:hover {
+    transform: scale(1.1);
+}
